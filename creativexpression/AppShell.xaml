@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:creativexpression"    
     Title="Creativexpression">
 
-    <FlyoutItem Title="Usuários"  >
+   <FlyoutItem Title="Usuários"  >
         
     <ShellContent
         Title="Listagem Usuarios"
@@ -23,28 +23,28 @@
     <FlyoutItem Title="Produtos"  >
 
         <ShellContent
-         Title="Listagem Produtos"
-         ContentTemplate="{DataTemplate local:ListagemProdutos}"
-         Route="ListagemProdutos" />
+            Title="Listagem Produtos"
+            ContentTemplate="{DataTemplate local:ListagemProdutos}"
+            Route="ListagemProdutos" />
 
         <ShellContent
           Title="Cadastro Produtos"
-          ContentTemplate="{DataTemplate local:CadastroProdutos}"
-         Route="CadastroProdutos" />
+            ContentTemplate="{DataTemplate local:CadastroProdutos}"
+            Route="CadastroProdutos" />
 
     </FlyoutItem>
 
     <FlyoutItem Title="Vendas"  >
 
         <ShellContent
-          Title="Listagem Vendas"
-         ContentTemplate="{DataTemplate local:ListagemVendas}"
-         Route="ListagemVendas" />
+            Title="Listagem Vendas"
+            ContentTemplate="{DataTemplate local:ListagemVendas}"
+            Route="ListagemVendas" />
 
         <ShellContent
-        Title="Cadastro Vendas"
-        ContentTemplate="{DataTemplate local:CadastroVendas}"
-        Route="CadastroVendas" />
+            Title="Cadastro Vendas"
+            ContentTemplate="{DataTemplate local:CadastroVendas}"
+            Route="CadastroVendas" />
 
     </FlyoutItem>
 
