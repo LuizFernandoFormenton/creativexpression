@@ -3,13 +3,50 @@
     x:Class="creativexpression.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:creativexpression"
-    Shell.FlyoutBehavior="Disabled"
-    Title="creativexpression">
+    xmlns:local="clr-namespace:creativexpression"    
+    Title="Creativexpression">
+
+    <FlyoutItem Title="Usuários"  >
+        
+    <ShellContent
+        Title="Listagem Usuarios"
+        ContentTemplate="{DataTemplate local:ListagemUsuarios}"
+        Route="ListagemUsuarios" />
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Cadastro Usuarios"
+        ContentTemplate="{DataTemplate local:CadastroUsuarios}"
+        Route="CadastroUsuarios" />
+        
+    </FlyoutItem>
+
+    <FlyoutItem Title="Produtos"  >
+
+        <ShellContent
+         Title="Listagem Produtos"
+         ContentTemplate="{DataTemplate local:ListagemProdutos}"
+         Route="ListagemProdutos" />
+
+        <ShellContent
+          Title="Cadastro Produtos"
+          ContentTemplate="{DataTemplate local:CadastroProdutos}"
+         Route="CadastroProdutos" />
+
+    </FlyoutItem>
+
+    <FlyoutItem Title="Vendas"  >
+
+        <ShellContent
+          Title="Listagem Vendas"
+         ContentTemplate="{DataTemplate local:ListagemVendas}"
+         Route="ListagemVendas" />
+
+        <ShellContent
+        Title="Cadastro Vendas"
+        ContentTemplate="{DataTemplate local:CadastroVendas}"
+        Route="CadastroVendas" />
+
+    </FlyoutItem>
+
 
 </Shell>
