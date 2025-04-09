@@ -63,6 +63,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+<<<<<<< Updated upstream
 	  <MauiXaml Update="CadastroProdutos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -72,6 +73,11 @@
 	  <MauiXaml Update="ListagemProdutos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+=======
+	  <MauiXaml Update="CadastroVendas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+>>>>>>> Stashed changes
 	  <MauiXaml Update="ListagemVendas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
