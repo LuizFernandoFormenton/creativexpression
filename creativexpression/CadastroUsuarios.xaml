@@ -3,10 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="creativexpression.CadastroUsuarios"
              Title="CadastroUsuarios">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <Label Text="Digite o Nome:" />
+            <Entry x:Name="EntryNome" />
+
+            <Label Text="Digite Data de Nascimento:" />
+            <DatePicker MinimumDate="01/01/1901" MaximumDate="12/31/2025" Date="06/21/2025" x:Name="EntryDataNascimento" />
+
+            <Label Text="Digite o Sexo:" />
+            <Entry x:Name="EntrySexo" />
+
+            <Label Text="Digite o e-mail:" />
+            <Entry x:Name="EntryEmail" />
+
+            <Label Text="Digite a Senha:" />
+            <Entry x:Name="EntrySenha" />
+
+            <Label Text="Digite o CPF:" />
+            <Entry x:Name="EntryCpf" />
+
+            <Label Text="Digite o Telefone:" />
+            <Entry x:Name="EntryTelefone" />
+
+            <Label Text="Digite o CEP:" />
+            <Entry x:Name="EntryCep" />
+
+
+            <Button Text="Salvar" Clicked="Salvar_Clicked" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
 </ContentPage>

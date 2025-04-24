@@ -6,4 +6,15 @@ public partial class ListagemUsuarios : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        Usuario u = new Usuario();
+        Lista.ItemsSource = null;
+        Lista.ItemsSource = u.BuscaTodos();
+
+    }
+
 }
