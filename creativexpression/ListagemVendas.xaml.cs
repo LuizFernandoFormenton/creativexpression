@@ -18,6 +18,7 @@ public partial class ListagemVendas : ContentPage
         Lista.ItemsSource = null;
         Lista.ItemsSource = v.BuscaTodos();
 
+
     }
 
 }

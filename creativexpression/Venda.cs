@@ -31,7 +31,7 @@ namespace creativexpression
 
         public List<Venda> BuscaTodos()
         {
-            DataTable dt = conexao.ExecutaSelect("SELECT vendas.quantidade, produtos.nome_do_produto, vendas.id_transacao vendas.data FROM vendas JOIN produtos ON vendas.id_produto = produtos.id;");
+            DataTable dt = conexao.ExecutaSelect("SELECT vendas.quantidade, produtos.nome_do_produto, vendas.id_transacao, vendas.data FROM vendas JOIN produtos ON vendas.id_produto = produtos.id;");
 
             List<Venda> lista = new List<Venda>();
 

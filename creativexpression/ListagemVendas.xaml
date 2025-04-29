@@ -12,17 +12,23 @@
                             <Grid Padding="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="50" />
-                                    <ColumnDefinition Width="300" />
-                                    <ColumnDefinition Width="50" />
-                                    <ColumnDefinition Width="150" />
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="230" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <Label  Text="{Binding id_transacao}" Grid.Row="0" Grid.Column="0" />
-                                <Label Text="{Binding nome_do_produto}" Grid.Row="0" Grid.Column="1" />
-                                <Label Text="{Binding quantidade}" Grid.Row="0" Grid.Column="2" />
-                                <Label Text="{Binding data}" Grid.Row="0" Grid.Column="3" />
+                                <Label  Text="Id Transação" FontAttributes="Bold" FontSize="10" TextColor="Grey" Margin="0,0,15,0" Grid.Row="0" Grid.Column="0"  />
+                                <Label Text="Nome do Produto"  FontAttributes="Bold" FontSize="10" TextColor="Grey" Margin="0,0,15,0" Grid.Row="0" Grid.Column="1"  />
+                                <Label Text="Quantidade"  FontAttributes="Bold" FontSize="10" TextColor="Grey" Margin="0,0,15,0" Grid.Row="0" Grid.Column="2" />
+                                <Label Text="Data"  FontAttributes="Bold" FontSize="10" TextColor="Grey" Margin="0,0,15,0"  Grid.Row="0" Grid.Column="3" />
+                                
+                                <Label Text="{Binding id_transacao}" Grid.Row="1" Grid.Column="0" />
+                                <Label Text="{Binding nome_do_produto}" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0" />
+                                <Label Text= "{Binding quantidade}" Grid.Row="1" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,10,0" />
+                                <Label Text="{Binding data}" Grid.Row="1" Grid.Column="3" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
