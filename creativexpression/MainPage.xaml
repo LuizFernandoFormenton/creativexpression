@@ -4,9 +4,7 @@
              x:Class="creativexpression.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout>
-           
-        </VerticalStackLayout>
+       
     </ScrollView>
 
 </ContentPage>
