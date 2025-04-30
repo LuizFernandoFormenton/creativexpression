@@ -64,19 +64,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
- 	  <MauiXaml Update="CadastroProdutos.xaml">
-		<Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-		<MauiXaml Update="CadastroVendas.xaml">
-		<Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="ListagemProdutos.xaml">
-	  	<Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="ListagemVendas.xaml">
-	 	<Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	</ItemGroup>
- 
+  <MauiXaml Update="CadastroProdutos.xaml">
+    <Generator>MSBuild:Compile</Generator>
+  </MauiXaml>
+  <MauiXaml Update="CadastroVendas.xaml">
+    <Generator>MSBuild:Compile</Generator>
+  </MauiXaml>
+  <MauiXaml Update="ListagemProdutos.xaml">
+    <Generator>MSBuild:Compile</Generator>
+  </MauiXaml>
+  <MauiXaml Update="ListagemVendas.xaml">
+    <Generator>MSBuild:Compile</Generator>
+  </MauiXaml>
+</ItemGroup>
 
 </Project>

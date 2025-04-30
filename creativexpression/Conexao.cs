@@ -36,7 +36,6 @@ namespace creativexpression
             MySqlDataAdapter dados = new MySqlDataAdapter(comando);
             DataTable dt = new DataTable();
             dados.Fill(dt);
-
             conexao.Close();
 
             return dt;

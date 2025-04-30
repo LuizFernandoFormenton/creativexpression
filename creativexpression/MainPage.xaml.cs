@@ -9,13 +9,6 @@ namespace creativexpression
         {
             InitializeComponent();
         }
-
-        // Evento acionado ao clicar no botão "Entrar"
-        private async void OnEntrarClicked(object sender, EventArgs e)
-        {
-            // Exemplo de navegação para a página de listagem de usuários
-            await Navigation.PushAsync(new ListagemUsuarios());
-        }
     }
 }
 
