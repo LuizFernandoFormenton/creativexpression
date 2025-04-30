@@ -6,6 +6,11 @@
     xmlns:local="clr-namespace:creativexpression"    
     Title="Creativexpression">
 
+    <ShellContent
+    Title="Inicio"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+    
    <FlyoutItem Title="Usuários"  >
         
     <ShellContent

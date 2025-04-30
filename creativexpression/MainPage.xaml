@@ -1,10 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="creativexpression.MainPage">
+             x:Class="creativexpression.MainPage"
+             BackgroundColor ="White">
 
     <ScrollView>
-       
-    </ScrollView>
 
+        <VerticalStackLayout BackgroundColor="#EEE" >
+
+            <Frame BackgroundColor="White" Margin="35" >
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="Painel administrativo" FontAttributes="Bold" FontSize="28" HorizontalOptions="Center"  />
+                    <Label Text="CreativeXpression" FontAttributes="Bold"  HorizontalOptions="Center" FontSize="20" />
+                    <Image Source="C:\Users\arthur.ssouza5\Downloads\ChatGPT Image 29 de abr. de 2025, 20_47_29.png" HeightRequest="600" Aspect="AspectFit" />
+                    <Button BackgroundColor="#c71c14" WidthRequest="200" Text="Visitar o site" />
+                </VerticalStackLayout>
+            </Frame>
+            
+
+        </VerticalStackLayout>
+        
+        <!--<VerticalStackLayout Spacing="20" Padding="50" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Grey">
+
+    
+        
+
+            --><!-- Título --><!--
+            <Label Text="Painel administrativo"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#FF0000" />
+
+            --><!-- Subtítulo --><!--
+            <Label Text="CreativeExpress"
+                   FontSize="18" />
+
+            --><!-- Botão de navegação --><!--
+            <Button Text="Entrar"
+                    TextColor="White"
+                    BackgroundColor="#B22222"
+                    FontSize="18"
+                    CornerRadius="10"
+                    Padding="10"
+                    Clicked="OnEntrarClicked"
+                    HorizontalOptions="Center"
+                    WidthRequest="200" />
+
+        </VerticalStackLayout>-->
+    </ScrollView>
 </ContentPage>
+

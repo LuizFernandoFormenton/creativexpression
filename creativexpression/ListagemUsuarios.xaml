@@ -3,13 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="creativexpression.ListagemUsuarios"
              Title="ListagemUsuarios">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="Margin" Value="5,0" />
+        </Style>
+
+        <Style TargetType="Grid">
+            <Setter Property="ColumnSpacing" Value="10" />
+            <Setter Property="RowSpacing" Value="5" />
+            <Setter Property="BackgroundColor" Value="#f5f5f5" />
+            <Setter Property="Padding" Value="10" />
+        </Style>
+
+        <Style TargetType="ListView">
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="SeparatorVisibility" Value="None" />
+        </Style>
+    </ContentPage.Resources>
+
     <ScrollView>
         <VerticalStackLayout>
             <ListView x:Name="Lista">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="10">
+                            <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
@@ -32,7 +54,6 @@
                                 <Label Text="{Binding email}" Grid.Row="0" Grid.Column="5" />
                                 <Label Text="{Binding telefone}" Grid.Row="0" Grid.Column="6" />
                                 <Label Text="{Binding cep}" Grid.Row="0" Grid.Column="7" />
-
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
