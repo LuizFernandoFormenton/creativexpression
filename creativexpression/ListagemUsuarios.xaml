@@ -2,63 +2,82 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="creativexpression.ListagemUsuarios"
-             Title="ListagemUsuarios">
+             Title="Listagem de Usuários"
+             BackgroundColor="White">
 
     <ContentPage.Resources>
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="14" />
             <Setter Property="TextColor" Value="Black" />
             <Setter Property="VerticalTextAlignment" Value="Center" />
-            <Setter Property="Margin" Value="5,0" />
+            <Setter Property="Padding" Value="5,2" />
         </Style>
-
         <Style TargetType="Grid">
-            <Setter Property="ColumnSpacing" Value="10" />
-            <Setter Property="RowSpacing" Value="5" />
-            <Setter Property="BackgroundColor" Value="#f5f5f5" />
-            <Setter Property="Padding" Value="10" />
-        </Style>
-
-        <Style TargetType="ListView">
-            <Setter Property="BackgroundColor" Value="White" />
-            <Setter Property="SeparatorVisibility" Value="None" />
+            <Setter Property="ColumnSpacing" Value="5" />
+            <Setter Property="RowSpacing" Value="0" />
         </Style>
     </ContentPage.Resources>
 
     <ScrollView>
-        <VerticalStackLayout>
-            <ListView x:Name="Lista">
+        <VerticalStackLayout Spacing="10" Padding="10">
+
+            <!-- Cabeçalho estilo Excel -->
+            <Grid BackgroundColor="#D32F2F" Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="ID" TextColor="White" FontAttributes="Bold" Grid.Column="0" />
+                <Label Text="Nome" TextColor="White" FontAttributes="Bold" Grid.Column="1" />
+                <Label Text="Nascimento" TextColor="White" FontAttributes="Bold" Grid.Column="2" />
+                <Label Text="Sexo" TextColor="White" FontAttributes="Bold" Grid.Column="3" />
+                <Label Text="CPF" TextColor="White" FontAttributes="Bold" Grid.Column="4" />
+                <Label Text="Email" TextColor="White" FontAttributes="Bold" Grid.Column="5" />
+                <Label Text="Telefone" TextColor="White" FontAttributes="Bold" Grid.Column="6" />
+                <Label Text="CEP" TextColor="White" FontAttributes="Bold" Grid.Column="7" />
+            </Grid>
+
+            <!-- Lista de dados -->
+            <ListView x:Name="Lista"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None"
+                      BackgroundColor="White">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
+                            <Grid BackgroundColor="#FAFAFA">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
                                 </Grid.ColumnDefinitions>
 
-                                <Label Text="{Binding id}" Grid.Row="0" Grid.Column="0" />
-                                <Label Text="{Binding nome}" Grid.Row="0" Grid.Column="1" />
-                                <Label Text="{Binding data_nascimento}" Grid.Row="0" Grid.Column="2" />
-                                <Label Text="{Binding sexo}" Grid.Row="0" Grid.Column="3" />
-                                <Label Text="{Binding cpf}" Grid.Row="0" Grid.Column="4" />
-                                <Label Text="{Binding email}" Grid.Row="0" Grid.Column="5" />
-                                <Label Text="{Binding telefone}" Grid.Row="0" Grid.Column="6" />
-                                <Label Text="{Binding cep}" Grid.Row="0" Grid.Column="7" />
+                                <Label Text="{Binding id}" Grid.Column="0" />
+                                <Label Text="{Binding nome}" Grid.Column="1" />
+                                <Label Text="{Binding data_nascimento}" Grid.Column="2" />
+                                <Label Text="{Binding sexo}" Grid.Column="3" />
+                                <Label Text="{Binding cpf}" Grid.Column="4" />
+                                <Label Text="{Binding email}" Grid.Column="5" />
+                                <Label Text="{Binding telefone}" Grid.Column="6" />
+                                <Label Text="{Binding cep}" Grid.Column="7" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
