@@ -21,10 +21,10 @@
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding id}" Grid.Row="0" Grid.Column="0" />
-                                <Label Text="{Binding nome}" Grid.Row="0" Grid.Column="1" />
-                                <Label Text="{Binding preco}" Grid.Row="0" Grid.Column="2" />
-                                <Label Text="{Binding imagem}" Grid.Row="0" Grid.Column="3" />
+                                <Image WidthRequest="50" Source="{Binding imagem}" Grid.Row="0" Grid.Column="0" />
+                                <Label Text="{Binding id}" Grid.Row="0" Grid.Column="1" />
+                                <Label Text="{Binding nome}" Grid.Row="0" Grid.Column="2" />
+                                <Label Text="{Binding preco}" Grid.Row="0" Grid.Column="3" />
                                 <Label Text="{Binding tamanho}" Grid.Row="0" Grid.Column="4" />
                             </Grid>
                         </ViewCell>

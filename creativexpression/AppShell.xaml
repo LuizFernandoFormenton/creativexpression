@@ -18,11 +18,6 @@
         ContentTemplate="{DataTemplate local:ListagemUsuarios}"
         Route="ListagemUsuarios" />
 
-    <ShellContent
-        Title="Cadastro Usuarios"
-        ContentTemplate="{DataTemplate local:CadastroUsuarios}"
-        Route="CadastroUsuarios" />
-        
     </FlyoutItem>
 
     <FlyoutItem Title="Produtos"  >
@@ -46,10 +41,6 @@
             ContentTemplate="{DataTemplate local:ListagemVendas}"
             Route="ListagemVendas" />
 
-        <ShellContent
-            Title="Cadastro Vendas"
-            ContentTemplate="{DataTemplate local:CadastroVendas}"
-            Route="CadastroVendas" />
 
     </FlyoutItem>
 

@@ -32,7 +32,7 @@ namespace creativexpression
 
         public List<Produto> BuscaTodos()
         {
-            DataTable dt = conexao.ExecutaSelect("SELECT * FROM produto;");
+            DataTable dt = conexao.ExecutaSelect("SELECT * FROM produtos;");
 
             List<Produto> lista = new List<Produto>();
 

@@ -67,7 +67,7 @@
                                 <Label Text="{Binding id}" Grid.Column="0" />
                                 <Label Text="{Binding nome}" Grid.Column="1" />
                                 <Label Text="{Binding data_nascimento}" Grid.Column="2" />
-                                <Label Text="{Binding sexo}" Grid.Column="3" />
+                                <Label Text="{Binding genero}" Grid.Column="3" />
                                 <Label Text="{Binding cpf}" Grid.Column="4" />
                                 <Label Text="{Binding email}" Grid.Column="5" />
                                 <Label Text="{Binding telefone}" Grid.Column="6" />
