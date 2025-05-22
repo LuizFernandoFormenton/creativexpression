@@ -10,6 +10,8 @@
             <Entry x:Name="EntryNome" />
             <Label Text="Digite o preco:" />
             <Entry x:Name="EntryPreco" />
+            <Label Text="Insira a URL da imagem:" />
+            <Entry x:Name="EntryImagem" />
             <Label Text="Digite o tamanho:" />
             <Entry x:Name="EntryTamanho" />
             <Button Text="Salvar" Clicked="Salvar_Clicked" />

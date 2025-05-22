@@ -13,8 +13,8 @@
             <Label Text="Digite Data de Nascimento:" />
             <DatePicker MinimumDate="01/01/1901" MaximumDate="12/31/2025" Date="06/21/2025" x:Name="EntryDataNascimento" />
 
-            <Label Text="Digite o Sexo:" />
-            <Entry x:Name="EntrySexo" />
+            <Label Text="Digite o Genero:" />
+            <Entry x:Name="EntryGenero" />
 
             <Label Text="Digite o e-mail:" />
             <Entry x:Name="EntryEmail" />

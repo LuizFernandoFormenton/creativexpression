@@ -8,9 +8,11 @@ namespace creativexpression
     {
         public int id {get; set;}
 
-        public string nome_do_produto {get; set;}
+        public string nome {get; set;}
 
         public float preco {get; set;}
+
+        public string imagem {get; set;}
         
         public string tamanho { get; set; }
 
@@ -23,14 +25,14 @@ namespace creativexpression
 
         public void Insere()
         {
-            string query = $" INSERT INTO produtos (nome_do_produto, preco, tamanho) VALUES ( '{nome_do_produto}', {preco.ToString().Replace(",",".")}, '{tamanho}' ); ";
+            string query = $" INSERT INTO produtos (nome, preco, imagem, tamanho) VALUES ( '{nome}', {preco.ToString().Replace(",",".")}, '{imagem}', '{tamanho}' ); ";
             conexao.ExecutaComando(query);
             Console.WriteLine(" Produto inserido com sucesso! ");
         }
 
         public List<Produto> BuscaTodos()
         {
-            DataTable dt = conexao.ExecutaSelect("SELECT * FROM produtos;");
+            DataTable dt = conexao.ExecutaSelect("SELECT * FROM produto;");
 
             List<Produto> lista = new List<Produto>();
 
@@ -39,8 +41,9 @@ namespace creativexpression
                 Produto produto = new Produto();
 
                 produto.id = int.Parse(Linha["id"].ToString());
-                produto.nome_do_produto = Linha["nome_do_produto"].ToString();
+                produto.nome = Linha["nome"].ToString();
                 produto.preco = float.Parse(Linha["preco"].ToString());
+                produto.imagem = Linha["imagem"].ToString();
                 produto.tamanho = (Linha["tamanho"].ToString());
 
                 lista.Add(produto);

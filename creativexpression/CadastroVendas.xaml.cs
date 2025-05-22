@@ -10,14 +10,12 @@ public partial class CadastroVendas : ContentPage
     private void Salvar_Clicked(object sender, EventArgs e)
     {
 		Venda v = new Venda();
-		v.id_transacao = int.Parse(EntryId_transacao.Text);
-		v.id_produto = int.Parse(EntryId_produto.Text);
-		v.quantidade = int.Parse(EntryQuantidade.Text);
+		v.id = int.Parse(EntryId.Text);
+		v.usuario_id = int.Parse(EntryUsuario_id.Text);
 		v.Insere();
 
-		EntryId_transacao.Text = "";
-		EntryId_produto.Text = "";
-		EntryQuantidade.Text = "";
+		EntryId.Text = "";
+		EntryUsuario_id.Text = ""; 
 
 		Shell.Current.GoToAsync("ListagemVendas");
 

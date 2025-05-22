@@ -9,11 +9,9 @@ namespace creativexpression
 {
     internal class Venda
     {
-        public int id_transacao { get; set; }
-        public int id_produto { get; set; }
-        public int quantidade { get; set; }
-        public string nome_do_produto { get; set; }
+        public int id { get; set; }
         public DateTime data { get; set; }
+        public int usuario_id { get; set; }
 
         Conexao conexao { get; set; }
 
@@ -24,27 +22,26 @@ namespace creativexpression
 
         public void Insere()
         {
-            string query = $"INSERT INTO vendas (id_transacao, id_produto, quantidade) VALUES( '{id_transacao}', {id_produto},'{quantidade}');";
+            string query = $"INSERT INTO vendas (id, usuario_id) VALUES( '{id}', '{usuario_id}');";
             conexao.ExecutaComando(query);
             Console.WriteLine("Produto inserido com sucesso");
         }
 
         public List<Venda> BuscaTodos()
         {
-            DataTable dt = conexao.ExecutaSelect("SELECT vendas.quantidade, produtos.nome_do_produto, vendas.id_transacao, vendas.data FROM vendas JOIN produtos ON vendas.id_produto = produtos.id;");
+            DataTable dt = conexao.ExecutaSelect("SELECT produto.nome, venda.id_transacao, venda.data FROM venda JOIN produtos ON venda.usuario.id = produto.id;");
 
             List<Venda> lista = new List<Venda>();
 
             foreach (DataRow linha in dt.Rows)
             {
                 Venda v = new Venda();
-                v.id_transacao = int.Parse(linha["id_transacao"].ToString());
+                v.id = int.Parse(linha["id"].ToString());
 
-                v.nome_do_produto = linha["nome_do_produto"].ToString();
-
-                v.quantidade = int.Parse(linha["quantidade"].ToString());
+                v.usuario_id = int.Parse(linha["usuario_id"].ToString());
 
                 v.data = DateTime.Parse(linha["data"].ToString());
+
 
                 lista.Add(v);
             }

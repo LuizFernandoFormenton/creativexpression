@@ -9,7 +9,7 @@ namespace creativexpression
     class Conexao
     {
 
-        string dadosConexao = "server=localhost;user=root;database=creativexpression;port=3306;password=";
+        string dadosConexao = "server=localhost;user=root;database=creative_xpression;port=3306;password=";
 
         public int ExecutaComando(string query)
         {

@@ -15,7 +15,7 @@ namespace creativexpression
         public int id { get; set; }
         public string nome { get; set; }
         public string data_nascimento { get; set; }
-        public int sexo { get; set; }
+        public int genero { get; set; }
         public string email { get; set; }
         public string senha { get; set; }
         public string cpf { get; set; }
@@ -31,14 +31,14 @@ namespace creativexpression
 
         public void Insere()
         {
-            string query = $"INSERT INTO usuarios (nome, data_nascimento, sexo, email, senha, cpf, telefone, cep ) VALUES ( '{nome}', '{data_nascimento}', '{sexo}', '{email}', '{senha}', '{cpf}', '{telefone}', '{cep}' );";
+            string query = $"INSERT INTO usuarios (nome, data_nascimento, genero, email, senha, cpf, telefone, cep ) VALUES ( '{nome}', '{data_nascimento}', '{genero}', '{email}', '{senha}', '{cpf}', '{telefone}', '{cep}' );";
             conexao.ExecutaComando(query);
             Console.WriteLine("Usuario inserido com sucesso!");
         }
 
         public List<Usuario> BuscaTodos()
         {
-            DataTable dt = conexao.ExecutaSelect("SELECT * FROM usuarios;");
+            DataTable dt = conexao.ExecutaSelect("SELECT * FROM usuario;");
 
             List<Usuario> lista = new List<Usuario>();
 
@@ -49,7 +49,7 @@ namespace creativexpression
                 u.id = int.Parse(linha["id"].ToString());
                 u.nome = linha["nome"].ToString();
                 u.data_nascimento = linha["data_nascimento"].ToString();
-                u.sexo = int.Parse(linha["sexo"].ToString());
+                u.genero = int.Parse(linha["sexo"].ToString());
                 u.email = linha["email"].ToString();
                 u.senha = linha["senha"].ToString();
                 u.cpf = linha["cpf"].ToString();

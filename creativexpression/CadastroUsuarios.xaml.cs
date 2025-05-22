@@ -15,7 +15,7 @@ public partial class CadastroUsuarios : ContentPage
         Usuario u = new Usuario();
         u.nome = EntryNome.Text;
         u.data_nascimento = string.Join("-", EntryDataNascimento.Date.ToString().Split(" ")[0].Split("/").Reverse());
-        u.sexo = int.Parse(EntrySexo.Text);
+        u.genero = EntryGenero.Text; ;
         u.senha = EntrySenha.Text;
         u.email = EntryEmail.Text;
         u.cpf = EntryCpf.Text;
@@ -25,7 +25,7 @@ public partial class CadastroUsuarios : ContentPage
 
         EntryNome.Text = "";
         //EntryDataNascimento.Date = "";
-        EntrySexo.Text = "";
+        EntryGenero.Text = "";
         EntrySenha.Text = "";
         EntryEmail.Text = "";
         EntryCpf.Text = "";
