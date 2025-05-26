@@ -8,8 +8,8 @@ namespace creativexpression
 {
     class Conexao
     {
-
-        string dadosConexao = "server=localhost;user=root;database=creative_xpression;port=3306;password=";
+        
+        string dadosConexao = "server=10.60.44.28;user=root;database=creative_xpression;port=3306;password=senac123;";
 
         public int ExecutaComando(string query)
         {
