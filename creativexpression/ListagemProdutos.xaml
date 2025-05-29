@@ -22,7 +22,7 @@
         <VerticalStackLayout Spacing="10" Padding="10">
 
             <!-- Cabeçalho estilo Excel -->
-            <Grid BackgroundColor="#1976D2" Padding="5">
+            <Grid BackgroundColor="#D32F2F" Padding="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="*" />
