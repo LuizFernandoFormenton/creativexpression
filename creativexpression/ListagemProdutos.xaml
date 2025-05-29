@@ -2,36 +2,76 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="creativexpression.ListagemProdutos"
-             Title="ListagemProdutos">
+             Title="Listagem de Produtos"
+             BackgroundColor="White">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="Padding" Value="5,2" />
+        </Style>
+        <Style TargetType="Grid">
+            <Setter Property="ColumnSpacing" Value="5" />
+            <Setter Property="RowSpacing" Value="0" />
+        </Style>
+    </ContentPage.Resources>
 
     <ScrollView>
-        <VerticalStackLayout>
-            <ListView x:Name="Lista">
+        <VerticalStackLayout Spacing="10" Padding="10">
+
+            <!-- Cabeçalho estilo Excel -->
+            <Grid BackgroundColor="#1976D2" Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Imagem" TextColor="White" FontAttributes="Bold" Grid.Column="0" />
+                <Label Text="ID" TextColor="White" FontAttributes="Bold" Grid.Column="1" />
+                <Label Text="Nome" TextColor="White" FontAttributes="Bold" Grid.Column="2" />
+                <Label Text="Preço" TextColor="White" FontAttributes="Bold" Grid.Column="3" />
+                <Label Text="Tamanho" TextColor="White" FontAttributes="Bold" Grid.Column="4" />
+            </Grid>
+
+            <!-- Lista de dados -->
+            <ListView x:Name="Lista"
+                      HasUnevenRows="True"
+                      SeparatorVisibility="None"
+                      BackgroundColor="White">
                 <ListView.ItemTemplate>
-                    <DataTemplate >
+                    <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
+                            <Grid BackgroundColor="#FAFAFA" Padding="5">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
                                 </Grid.ColumnDefinitions>
-                                <Image WidthRequest="50" Source="{Binding imagem}" Grid.Row="0" Grid.Column="0" />
-                                <Label Text="{Binding id}" Grid.Row="0" Grid.Column="1" />
-                                <Label Text="{Binding nome}" Grid.Row="0" Grid.Column="2" />
-                                <Label Text="{Binding preco}" Grid.Row="0" Grid.Column="3" />
-                                <Label Text="{Binding tamanho}" Grid.Row="0" Grid.Column="4" />
+
+                                <Image Source="{Binding imagem}"
+                                       WidthRequest="50"
+                                       HeightRequest="50"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       Grid.Column="0" />
+
+                                <Label Text="{Binding id}" Grid.Column="1" />
+                                <Label Text="{Binding nome}" Grid.Column="2" />
+                                <Label Text="{Binding preco}" Grid.Column="3" />
+                                <Label Text="{Binding tamanho}" Grid.Column="4" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
         </VerticalStackLayout>
     </ScrollView>
-   
 </ContentPage>
