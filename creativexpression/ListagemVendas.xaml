@@ -30,7 +30,7 @@
                                 <Label Text="{Binding id}" Grid.Row="1" Grid.Column="0" />
                                 <Label Text="{Binding produto_nome}" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0" />
                                 <Label Text="{Binding usuario_nome}" Grid.Row="1" Grid.Column="2" Margin="0,0,10,0" />
-                                <Label Text= "{Binding quantidade_vendida}" Grid.Row="3" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,10,0" />
+                                <Label Text= "{Binding quantidade_vendida}" Grid.Row="3" Grid.Column="3" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,10,0" />
                                 <Label Text="{Binding data}" Grid.Row="1" Grid.Column="4" />
                             </Grid>
                         </ViewCell>
